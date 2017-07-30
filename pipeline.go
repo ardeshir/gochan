@@ -1,4 +1,12 @@
-// Stages using multiple channels
+/*  Pipeline using multiple channels   ******************/
+/*
+ 1) We can create pipelines by chaining channels
+ 2) A chained channel is a stage in the pipeline
+ 3) A stage will receive from an inbound channel until closed
+ 4) Pipelines are a design pattern not an explicit type
+
+*********************************************************/
+
 package main
 import("fmt")
 
