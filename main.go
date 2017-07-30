@@ -2,8 +2,8 @@
 package main
 import ("fmt"; "time")
 func main() {
-	c1 := getChannel("chan 1")
-	c2 := getChannel("chan 2")
+	c1 := getChannel("1st pipe:")
+	c2 := getChannel("2nd pipe:")
    for i := 1; i <= 4; i++ {
 	select {
 		case msg := <- c1:
@@ -15,7 +15,7 @@ func main() {
 }
 
 func getChannel(msg string) <- chan string {
-	c := make(chan string)
+	c := make(chan string, 2)
 	go func() {
 	  for i := 1; i <= 2; i++ {
 		c <- fmt.Sprintf("%s %d", msg, i)

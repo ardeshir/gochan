@@ -2,8 +2,8 @@
 package main
 import ("fmt"; "time")
 func main() {
-	c1 := getChannel("Pipe one ")
-	c2 := getChannel("Pipe two ")
+	c1 := getChannel("chan one ")
+	c2 := getChannel("chan two ")
    for i := 1; i <= 4; i++ {
 	select {
 		case msg := <- c1:
