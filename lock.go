@@ -7,7 +7,7 @@ var done bool
 
 func routine() {
 
-	a = "hi from inside routine"
+	a = "Hi from inside go routine"
         // l.Lock()
 	done = true
         l.Unlock()
